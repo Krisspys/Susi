@@ -1,18 +1,26 @@
 [
   {
     "id": 1,
-    "titulo": "Casa / Chalet pareado en Venta, Quijorna",
-    "descripcion": "Hermosa casa pareada con jardín privado en una tranquila zona residencial.",
-    "precio": "360,000 €",
+    "tipo": "casa",
+    "precio": 360000,
     "ubicacion": "Quijorna",
-    "imagen": "/images/casa1.jpg"
+    "titulo": "Casa en Quijorna",
+    "imagen": "public/images/casa1.jpg"
   },
   {
     "id": 2,
-    "titulo": "Casa independiente en Venta, El Bosque, Villaviciosa de Odón",
-    "descripcion": "Casa exclusiva con piscina privada y grandes ventanales.",
-    "precio": "785,000 €",
+    "tipo": "casa",
+    "precio": 785000,
     "ubicacion": "Villaviciosa de Odón",
-    "imagen": "/images/casa2.jpg"
+    "titulo": "Casa en Villaviciosa de Odón",
+    "imagen": "public/images/casa2.jpg"
+  },
+  {
+    "id": 3,
+    "tipo": "local",
+    "precio": 1800,
+    "ubicacion": "San Fernando de Henares",
+    "titulo": "Local en San Fernando de Henares",
+    "imagen": "public/images/local.jpg"
   }
 ]
