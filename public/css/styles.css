@@ -223,3 +223,73 @@ header nav ul li a {
 .contact-links .btn:hover {
   background-color: #0056b3;
 }
+
+/* Formulario de Contacto */
+.contact-form form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.contact-form .btn {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 0.8rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+}
+
+.contact-form .btn:hover {
+  background-color: #0056b3;
+}
+
+.form-message {
+  margin-top: 1rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.contact-info ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+.contact-info ul li {
+  margin: 0.5rem 0;
+}
+
+.contact-info ul a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.contact-info ul a:hover {
+  text-decoration: underline;
+}
+
+/* Google Map */
+.map iframe {
+  border-radius: 10px;
+}

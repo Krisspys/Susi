@@ -4,40 +4,87 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contacto</title>
-  <link rel="stylesheet" href="css/styles.css">
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../public/css/styles.css">
+  <script defer src="../public/js/contacto.js"></script>
 </head>
 <body>
+  <!-- Encabezado -->
   <header>
-    <h1>Contacto</h1>
-    <nav>
-      <a href="index.html">Inicio</a>
-      <a href="catalogo.html">Catálogo</a>
-      <a href="about.html">Sobre mí</a>
-    </nav>
+    <div class="container">
+      <img src="../public/images/logo.png" alt="Logotipo Inmobiliaria" class="logo">
+      <nav>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="propiedades.html">Propiedades</a></li>
+          <li><a href="about.html">Sobre mí</a></li>
+          <li><a href="contacto.html" class="active">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
-  <main>
-    <h2>Envíanos tu consulta</h2>
-    <form action="https://formsubmit.co/manep27700@nongnue.com" method="POST" class="max-w-lg mx-auto bg-white p-6 rounded-lg shadow-lg">
-        <label for="nombre" class="block text-sm font-medium text-gray-700">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm">
-        
-        <label for="email" class="block text-sm font-medium text-gray-700 mt-4">Email:</label>
-        <input type="email" id="email" name="email" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm">
-        
-        <label for="mensaje" class="block text-sm font-medium text-gray-700 mt-4">Mensaje:</label>
-        <textarea id="mensaje" name="mensaje" rows="5" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm"></textarea>
-        
-        <button type="submit" class="mt-6 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">Enviar</button>
-      </form>      
-  </main>
+
+  <!-- Hero -->
+  <section class="hero small-hero">
+    <div class="container">
+      <h1>Contáctame</h1>
+    </div>
+  </section>
+
+  <!-- Formulario de Contacto -->
+  <section class="contact-form">
+    <div class="container">
+      <h2>Envíame un mensaje</h2>
+      <form id="contactForm">
+        <div class="form-group">
+          <label for="name">Nombre</label>
+          <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Correo electrónico</label>
+          <input type="email" id="email" name="email" placeholder="Tu correo" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Mensaje</label>
+          <textarea id="message" name="message" rows="5" placeholder="Tu mensaje" required></textarea>
+        </div>
+        <button type="submit" class="btn">Enviar</button>
+      </form>
+      <div id="formMessage" class="form-message"></div>
+    </div>
+  </section>
+
+  <!-- Información de Contacto -->
+  <section class="contact-info">
+    <div class="container">
+      <h2>Otras formas de contacto</h2>
+      <ul>
+        <li><strong>Teléfono:</strong> <a href="tel:+34678901234">+34 678 901 234</a></li>
+        <li><strong>Correo:</strong> <a href="mailto:susana.cabalgante@example.com">susana.cabalgante@example.com</a></li>
+        <li><strong>Oficina:</strong> Calle Ejemplo, 123, Madrid, España</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Ubicación en Google Maps -->
+  <section class="map">
+    <div class="container">
+      <h2>Encuéntranos</h2>
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3032.5392264553546!2d-3.703790684606536!3d40.416775979364206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzDCsDI1JzAxLjAiTiAzwrA0MScwNC4xIlc!5e0!3m2!1ses!2ses!4v1645708124268!5m2!1ses!2ses" 
+        width="100%" 
+        height="400" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy">
+      </iframe>
+    </div>
+  </section>
+
+  <!-- Pie de Página -->
   <footer>
-    <p>© 2024 Inmobiliaria. Todos los derechos reservados.</p>
-    <p>
-      <a href="https://www.instagram.com" target="_blank">Instagram</a> |
-      <a href="https://www.facebook.com" target="_blank">Facebook</a> |
-      <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
-    </p>
-  </footer>  
+    <div class="container">
+      <p>© 2024 Susana Cabalgante - Todos los derechos reservados.</p>
+    </div>
+  </footer>
 </body>
 </html>
