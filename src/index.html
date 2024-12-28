@@ -3,31 +3,97 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Inmobiliaria</title>
-  <link rel="stylesheet" href="css/styles.css">
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <title>Inmobiliaria - Susana Cabalgante</title>
+  <link rel="stylesheet" href="../public/css/styles.css">
 </head>
 <body>
+  <!-- Encabezado -->
   <header>
-    <h1>Bienvenido a la Inmobiliaria</h1>
-    <nav>
-      <a href="catalogo.html">Catálogo</a>
-      <a href="about.html">Sobre mí</a>
-      <a href="contacto.html">Contacto</a>
-    </nav>
+    <div class="container">
+      <img src="../public/images/logo.png" alt="Logotipo Inmobiliaria" class="logo">
+      <nav>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="propiedades.html">Propiedades</a></li>
+          <li><a href="about.html">Sobre mí</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
-  <main>
-    <h2>Encuentra tu hogar ideal</h2>
-    <a href="catalogo.html" class="btn">Ver Propiedades</a>
-  </main>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1>Encuentra la propiedad de tus sueños</h1>
+      <p>Con la ayuda de Susana Cabalgante, tu agente inmobiliario de confianza.</p>
+      <a href="propiedades.html" class="btn">Ver Propiedades</a>
+    </div>
+  </section>
+
+  <!-- Propiedades Destacadas -->
+  <section class="propiedades-destacadas">
+    <div class="container">
+      <h2>Propiedades Destacadas</h2>
+      <div class="grid">
+        <!-- Propiedad 1 -->
+        <div class="propiedad">
+          <img src="../public/images/casa1.jpg" alt="Casa en Quijorna">
+          <h3>Casa en Quijorna</h3>
+          <p>360,000 €</p>
+          <a href="single-property.html?id=1" class="btn">Ver más</a>
+        </div>
+        <!-- Propiedad 2 -->
+        <div class="propiedad">
+          <img src="../public/images/casa2.jpg" alt="Casa en Villaviciosa de Odón">
+          <h3>Casa en Villaviciosa de Odón</h3>
+          <p>785,000 €</p>
+          <a href="single-property.html?id=2" class="btn">Ver más</a>
+        </div>
+      </div>
+      <a href="propiedades.html" class="btn">Ver Todas las Propiedades</a>
+    </div>
+  </section>
+
+  <!-- Sobre la Agente -->
+  <section class="sobre-mi">
+    <div class="container">
+      <h2>Sobre mí</h2>
+      <img src="../public/images/agente.jpg" alt="Susana Cabalgante">
+      <p>Soy Susana Cabalgante, agente inmobiliario con años de experiencia ayudando a clientes a encontrar el hogar de sus sueños. Estoy aquí para ti.</p>
+      <a href="about.html" class="btn">Conóceme más</a>
+    </div>
+  </section>
+
+  <!-- Reseñas -->
+  <section class="resenas">
+    <div class="container">
+      <h2>Reseñas de Clientes</h2>
+      <div class="grid">
+        <blockquote>
+          <p>"Susana fue increíblemente profesional y amable. Nos ayudó a encontrar la casa perfecta."</p>
+          <cite>- Cliente Satisfecho</cite>
+        </blockquote>
+        <blockquote>
+          <p>"La mejor experiencia inmobiliaria que hemos tenido. Totalmente recomendada."</p>
+          <cite>- Cliente Feliz</cite>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pie de Página -->
   <footer>
-    <p>© 2024 Inmobiliaria. Todos los derechos reservados.</p>
-    <p>
-      <a href="https://www.instagram.com" target="_blank">Instagram</a> |
-      <a href="https://www.facebook.com" target="_blank">Facebook</a> |
-      <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
-    </p>
-  </footer>  
-  <script src="https://unpkg.com/netlify-cms-app@^2.0.0"></script>
+    <div class="container">
+      <p>© 2024 Susana Cabalgante - Todos los derechos reservados.</p>
+      <ul>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">LinkedIn</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
 </body>
 </html>
