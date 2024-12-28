@@ -159,3 +159,67 @@ header nav ul li a {
   width: 100%;
   border-radius: 5px;
 }
+
+/* Aboutme */
+.about-profile {
+  display: flex;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.about-details h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.about-details p {
+  margin: 0.5rem 0;
+  line-height: 1.6;
+}
+
+.about-values {
+  background: #f8f8f8;
+  padding: 2rem 0;
+  text-align: left;
+}
+
+.about-values h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.about-values ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about-values li {
+  margin: 1rem 0;
+  font-size: 1.2rem;
+}
+
+.contact-links {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.contact-links .btn {
+  padding: 0.8rem 1.5rem;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.contact-links .btn:hover {
+  background-color: #0056b3;
+}
