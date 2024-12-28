@@ -1,23 +1,18 @@
 [
-    {
-      "titulo": "Casa en el Centro",
-      "precio": "150,000 €",
-      "ubicacion": "Madrid, España",
-      "descripcion": "Casa amplia y luminosa cerca del centro histórico.",
-      "imagenes": [
-        "images/casa1-1.jpg",
-        "images/casa1-2.jpg"
-      ]
-    },
-    {
-      "titulo": "Apartamento Moderno",
-      "precio": "120,000 €",
-      "ubicacion": "Barcelona, España",
-      "descripcion": "Apartamento con diseño moderno y excelentes vistas.",
-      "imagenes": [
-        "images/apartamento1-1.jpg",
-        "images/apartamento1-2.jpg"
-      ]
-    }
-  ]
-  
+  {
+    "id": 1,
+    "titulo": "Casa / Chalet pareado en Venta, Quijorna",
+    "descripcion": "Hermosa casa pareada con jardín privado en una tranquila zona residencial.",
+    "precio": "360,000 €",
+    "ubicacion": "Quijorna",
+    "imagen": "/images/casa1.jpg"
+  },
+  {
+    "id": 2,
+    "titulo": "Casa independiente en Venta, El Bosque, Villaviciosa de Odón",
+    "descripcion": "Casa exclusiva con piscina privada y grandes ventanales.",
+    "precio": "785,000 €",
+    "ubicacion": "Villaviciosa de Odón",
+    "imagen": "/images/casa2.jpg"
+  }
+]

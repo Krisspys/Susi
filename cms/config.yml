@@ -1,0 +1,30 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "public/images" # Carpeta donde se subirán las imágenes
+public_folder: "/images"
+
+collections:
+  - name: "propiedades"
+    label: "Propiedades"
+    folder: "data"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Título", name: "titulo", widget: "string" }
+      - { label: "Descripción", name: "descripcion", widget: "text" }
+      - { label: "Precio", name: "precio", widget: "string" }
+      - { label: "Ubicación", name: "ubicacion", widget: "string" }
+      - { label: "Imagen Destacada", name: "imagen", widget: "image" }
+  - name: "agente"
+    label: "Datos del Agente"
+    files:
+      - label: "Información"
+        name: "info"
+        file: "data/agente.json"
+        fields:
+          - { label: "Nombre", name: "nombre", widget: "string" }
+          - { label: "Descripción", name: "descripcion", widget: "text" }
+          - { label: "Foto", name: "foto", widget: "image" }
+          - { label: "Redes Sociales", name: "redes", widget: "list", field: { label: "Enlace", name: "link", widget: "string" } }
