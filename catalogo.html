@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo de Propiedades</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Catálogo de Propiedades</h1>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="about.html">Sobre mí</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+  </header>
+  <main id="catalogo">
+    <h2>Propiedades Disponibles</h2>
+    <div id="listado-propiedades"></div>
+  </main>
+  <footer>
+    <p>© 2024 Inmobiliaria. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    // Cargar el JSON dinámicamente
+    fetch('data/properties.json')
+      .then(response => response.json())
+      .then(data => {
+        const listado = document.getElementById('listado-propiedades');
+        data.forEach(propiedad => {
+          const card = document.createElement('div');
+          card.classList.add('card');
+
+          card.innerHTML = `
+            <h3>${propiedad.titulo}</h3>
+            <p><strong>Precio:</strong> ${propiedad.precio}</p>
+            <p><strong>Ubicación:</strong> ${propiedad.ubicacion}</p>
+            <p>${propiedad.descripcion}</p>
+            <img src="${propiedad.imagenes[0]}" alt="${propiedad.titulo}">
+            <a href="detalle.html?titulo=${encodeURIComponent(propiedad.titulo)}" class="btn">Ver Detalles</a>
+          `;
+
+          listado.appendChild(card);
+        });
+      })
+      .catch(error => console.error('Error al cargar las propiedades:', error));
+  </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalles de la Propiedad</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Detalles de la Propiedad</h1>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="catalogo.html">Catálogo</a>
+    </nav>
+  </header>
+  <main id="detalles">
+    <h2>Cargando...</h2>
+  </main>
+  <footer>
+    <p>© 2024 Inmobiliaria. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    // Obtener el título de la propiedad de la URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const tituloPropiedad = urlParams.get('titulo');
+
+    // Cargar el JSON y buscar la propiedad
+    fetch('data/properties.json')
+      .then(response => response.json())
+      .then(data => {
+        const propiedad = data.find(p => p.titulo === tituloPropiedad);
+
+        const detalles = document.getElementById('detalles');
+        if (propiedad) {
+          detalles.innerHTML = `
+            <h2>${propiedad.titulo}</h2>
+            <p><strong>Precio:</strong> ${propiedad.precio}</p>
+            <p><strong>Ubicación:</strong> ${propiedad.ubicacion}</p>
+            <p>${propiedad.descripcion}</p>
+            ${propiedad.imagenes.map(img => `<img src="${img}" alt="${propiedad.titulo}">`).join('')}
+          `;
+        } else {
+          detalles.innerHTML = '<p>Propiedad no encontrada.</p>';
+        }
+      })
+      .catch(error => console.error('Error al cargar la propiedad:', error));
+  </script>
+</body>
+</html>

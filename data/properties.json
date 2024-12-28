@@ -1,0 +1,23 @@
+[
+    {
+      "titulo": "Casa en el Centro",
+      "precio": "150,000 €",
+      "ubicacion": "Madrid, España",
+      "descripcion": "Casa amplia y luminosa cerca del centro histórico.",
+      "imagenes": [
+        "images/casa1-1.jpg",
+        "images/casa1-2.jpg"
+      ]
+    },
+    {
+      "titulo": "Apartamento Moderno",
+      "precio": "120,000 €",
+      "ubicacion": "Barcelona, España",
+      "descripcion": "Apartamento con diseño moderno y excelentes vistas.",
+      "imagenes": [
+        "images/apartamento1-1.jpg",
+        "images/apartamento1-2.jpg"
+      ]
+    }
+  ]
+  
