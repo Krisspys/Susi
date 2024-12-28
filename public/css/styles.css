@@ -123,3 +123,39 @@ header nav ul li a {
 .propiedad h3 {
   margin: 1rem 0 0.5rem;
 }
+
+/* Single Property */
+/* Detalles de la Propiedad */
+.property-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.property-gallery {
+  flex: 1 1 50%;
+}
+
+.property-gallery img {
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+.property-info {
+  flex: 1 1 40%;
+}
+
+.property-info h2 {
+  color: #444;
+  font-size: 1.8rem;
+}
+
+.property-map {
+  margin: 2rem 0;
+}
+
+.property-map #map {
+  width: 100%;
+  border-radius: 5px;
+}

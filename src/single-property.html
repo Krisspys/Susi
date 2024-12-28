@@ -4,54 +4,62 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Detalles de la Propiedad</title>
-  <link rel="stylesheet" href="css/styles.css">
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="public/css/styles.css">
 </head>
 <body>
+  <!-- Encabezado -->
   <header>
-    <h1>Detalles de la Propiedad</h1>
-    <nav>
-      <a href="index.html">Inicio</a>
-      <a href="catalogo.html">Catálogo</a>
-    </nav>
+    <div class="container">
+      <img src="public/images/logo.png" alt="Logotipo Inmobiliaria" class="logo">
+      <nav>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="propiedades.html">Propiedades</a></li>
+          <li><a href="about.html">Sobre mí</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
-  <main id="detalles">
-    <h2>Cargando...</h2>
-  </main>
+
+  <!-- Hero -->
+  <section class="hero small-hero">
+    <div class="container">
+      <h1 id="property-title">Título de la Propiedad</h1>
+    </div>
+  </section>
+
+  <!-- Detalles de la Propiedad -->
+  <section class="property-details">
+    <div class="container">
+      <div class="property-gallery">
+        <img id="property-image" src="" alt="Imagen de la propiedad">
+      </div>
+      <div class="property-info">
+        <h2 id="property-price"></h2>
+        <p id="property-description"></p>
+        <p><strong>Ubicación:</strong> <span id="property-location"></span></p>
+        <button id="contact-button" class="btn">Contactar</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mapa -->
+  <section class="property-map">
+    <div class="container">
+      <h2>Ubicación</h2>
+      <div id="map" style="height: 300px;"></div>
+    </div>
+  </section>
+
+  <!-- Pie de Página -->
   <footer>
-    <p>© 2024 Inmobiliaria. Todos los derechos reservados.</p>
-    <p>
-      <a href="https://www.instagram.com" target="_blank">Instagram</a> |
-      <a href="https://www.facebook.com" target="_blank">Facebook</a> |
-      <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
-    </p>
-  </footer>  
+    <div class="container">
+      <p>© 2024 Susana Cabalgante - Todos los derechos reservados.</p>
+    </div>
+  </footer>
 
-  <script>
-    // Obtener el título de la propiedad de la URL
-    const urlParams = new URLSearchParams(window.location.search);
-    const tituloPropiedad = urlParams.get('titulo');
-
-    // Cargar el JSON y buscar la propiedad
-    fetch('data/properties.json')
-      .then(response => response.json())
-      .then(data => {
-        const propiedad = data.find(p => p.titulo === tituloPropiedad);
-
-        const detalles = document.getElementById('detalles');
-        if (propiedad) {
-          detalles.innerHTML = `
-            <h2>${propiedad.titulo}</h2>
-            <p><strong>Precio:</strong> ${propiedad.precio}</p>
-            <p><strong>Ubicación:</strong> ${propiedad.ubicacion}</p>
-            <p>${propiedad.descripcion}</p>
-            ${propiedad.imagenes.map(img => `<img src="${img}" alt="${propiedad.titulo}">`).join('')}
-          `;
-        } else {
-          detalles.innerHTML = '<p>Propiedad no encontrada.</p>';
-        }
-      })
-      .catch(error => console.error('Error al cargar la propiedad:', error));
-  </script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap&libraries=places" async defer></script>
+  <script src="js/single-property.js"></script>
 </body>
 </html>
